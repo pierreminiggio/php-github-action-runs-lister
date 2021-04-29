@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c06274aecbd4fc1c1d7325d58b5b08b",
+    "content-hash": "ce3fb2072fdb580f30b50160b118e583",
     "packages": [
+        {
+            "name": "pierreminiggio/github-action-run",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pierreminiggio/php-github-action-run.git",
+                "reference": "23a96a4683179d01d65c4a6e227129c8594aa3b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run/zipball/23a96a4683179d01d65c4a6e227129c8594aa3b5",
+                "reference": "23a96a4683179d01d65c4a6e227129c8594aa3b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "pierreminiggio/github-statuses-enum": "9999999-dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PierreMiniggio\\GithubActionRun\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pierre MINIGGIO",
+                    "email": "pierre@miniggiodev.fr"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/pierreminiggio/php-github-action-run/issues",
+                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/1.0.0"
+            },
+            "time": "2021-04-29T18:50:47+00:00"
+        },
         {
             "name": "pierreminiggio/github-statuses-enum",
             "version": "dev-main",
@@ -86,7 +124,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pierreminiggio/github-user-agent": 20,
-        "pierreminiggio/github-statuses-enum": 20
+        "pierreminiggio/github-statuses-enum": 20,
+        "pierreminiggio/github-action-run": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

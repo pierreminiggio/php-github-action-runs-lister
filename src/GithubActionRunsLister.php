@@ -2,6 +2,7 @@
 
 namespace PierreMiniggio\GithubActionRunsLister;
 
+use PierreMiniggio\GithubActionRun\GithubActionRun;
 use PierreMiniggio\GithubActionRunsLister\Exception\NotFoundException;
 use PierreMiniggio\GithubActionRunsLister\Exception\UnknownException;
 use PierreMiniggio\GithubUserAgent\GithubUserAgent;

@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pierreminiggio/php-github-action-run.git",
-                "reference": "23a96a4683179d01d65c4a6e227129c8594aa3b5"
+                "reference": "6b5feefd13e261fc8695b4a9dfd2f1f6eb2966d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run/zipball/23a96a4683179d01d65c4a6e227129c8594aa3b5",
-                "reference": "23a96a4683179d01d65c4a6e227129c8594aa3b5",
+                "url": "https://api.github.com/repos/pierreminiggio/php-github-action-run/zipball/6b5feefd13e261fc8695b4a9dfd2f1f6eb2966d7",
+                "reference": "6b5feefd13e261fc8695b4a9dfd2f1f6eb2966d7",
                 "shasum": ""
             },
             "require": {
@@ -40,9 +40,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pierreminiggio/php-github-action-run/issues",
-                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/1.0.0"
+                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/main"
             },
-            "time": "2021-04-29T18:50:47+00:00"
+            "time": "2021-04-29T23:15:47+00:00"
         },
         {
             "name": "pierreminiggio/github-statuses-enum",

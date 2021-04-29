@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce3fb2072fdb580f30b50160b118e583",
+    "content-hash": "7212e5638c41ccac3eb62ba366343922",
     "packages": [
         {
             "name": "pierreminiggio/github-action-run",
@@ -40,7 +40,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pierreminiggio/php-github-action-run/issues",
-                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/main"
+                "source": "https://github.com/pierreminiggio/php-github-action-run/tree/1.0.1"
             },
             "time": "2021-04-29T23:15:47+00:00"
         },
@@ -124,7 +124,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pierreminiggio/github-user-agent": 20,
-        "pierreminiggio/github-statuses-enum": 20,
         "pierreminiggio/github-action-run": 20
     },
     "prefer-stable": false,

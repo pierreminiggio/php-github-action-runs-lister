@@ -12,8 +12,6 @@ class GithubActionRunsLister
 {
 
     /**
-     * @return GithubActionRun[]
-     * 
      * @throws NotFoundException
      * @throws RuntimeException
      */
@@ -21,7 +19,7 @@ class GithubActionRunsLister
         string $owner,
         string $repo,
         string $workflowIdOrWorkflowFileName
-    ): array
+    ): RunListerResponse
     {
 
         $curl = curl_init("https://api.github.com/repos/$owner/$repo/actions/workflows/$workflowIdOrWorkflowFileName/runs");
@@ -56,18 +54,23 @@ class GithubActionRunsLister
             throw new RuntimeException('Bad Github API return : "total_count" missing');
         }
 
-        if ((int) $jsonResponse['total_count'] === 0) {
-            return [];
+        $totalCount = (int) $jsonResponse['total_count'];
+
+        if ($totalCount === 0) {
+            return new RunListerResponse([], 0);
         }
 
         if (! isset($jsonResponse['workflow_runs'])) {
             throw new RuntimeException('Bad Github API return : "workflow_runs" missing');
         }
 
-        return array_map(fn (array $fetchedRun): GithubActionRun => new GithubActionRun(
-            (int) $fetchedRun['id'],
-            $fetchedRun['status'],
-            $fetchedRun['conclusion']
-        ), $jsonResponse['workflow_runs']);
+        return new RunListerResponse(
+            array_map(fn (array $fetchedRun): GithubActionRun => new GithubActionRun(
+                (int) $fetchedRun['id'],
+                $fetchedRun['status'],
+                $fetchedRun['conclusion']
+            ), $jsonResponse['workflow_runs']),
+            $totalCount
+        );
     }
 }

@@ -18,15 +18,23 @@ class GithubActionRunsLister
     public function list(
         string $owner,
         string $repo,
-        string $workflowIdOrWorkflowFileName
+        string $workflowIdOrWorkflowFileName,
+        ?string $token = null
     ): RunListerResponse
     {
 
         $curl = curl_init("https://api.github.com/repos/$owner/$repo/actions/workflows/$workflowIdOrWorkflowFileName/runs");
-        curl_setopt_array($curl, [
+        
+        $curlOptions = [
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_USERAGENT => GithubUserAgent::USER_AGENT
-        ]);
+        ];
+
+        if ($token !== null) {
+            $curlOptions[CURLOPT_HTTPHEADER] = ['Authorization: token ' . $token];
+        }
+
+        curl_setopt_array($curl, $curlOptions);
 
         $response = curl_exec($curl);
 
